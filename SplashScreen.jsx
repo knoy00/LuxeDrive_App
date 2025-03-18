@@ -1,7 +1,13 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import {View, StyleSheet, Image} from "react-native"
 
-function SplashScreen() {
+function SplashScreen({navigation}) {
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.replace('AuthScreen')
+        }, 3000)
+    })
   return (
     <View style={styles.container}>
         <Image 

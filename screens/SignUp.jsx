@@ -13,14 +13,22 @@ function SignIn({navigation}) {
       </TouchableOpacity>
 
       <View style={styles.welcome_text_wrapper}>
-        <Text style={styles.welcome_text}>Welcome Back!</Text>
+        <Text style={styles.welcome_text}>Hello! Sign up to get started</Text>
       </View>
 
       <View style={styles.input_wrapper}>
         <TextInput
           style={styles.input_text}
+          placeholder="Username"
+          placeholderTextColor="#717171"
+          autoCapitalize="none"
+          autoCorrect={false}
+        />
+
+        <TextInput
+          style={styles.input_text}
           placeholder="Email or Phone Number"
-          placeholderTextColor="#ddd"
+          placeholderTextColor="#717171"
           keyboardType="email-address"
           autoCapitalize="none"
           autoCorrect={false}
@@ -29,24 +37,28 @@ function SignIn({navigation}) {
         <TextInput
           style={styles.input_text}
           placeholder="Password"
-          placeholderTextColor="#ddd"
+          placeholderTextColor="#717171"
+          secureTextEntry={true}
+          autoCapitalize="none"
+          autoCorrect={false}
+        />
+        <TextInput
+          style={styles.input_text}
+          placeholder="Confirm Password"
+          placeholderTextColor="#717171"
           secureTextEntry={true}
           autoCapitalize="none"
           autoCorrect={false}
         />
       </View>
 
-      <TouchableOpacity>
-        <Text style={styles.forgot_password}>Forgot Password?</Text>
-      </TouchableOpacity>
-
       <TouchableOpacity style={styles.sign_in_button}>
-        <Text style={styles.text_sign_in}>Sign In</Text>
+        <Text style={styles.text_sign_in}>Sign Up</Text>
       </TouchableOpacity>
 
       <View style={styles.seperator_wrapper}>
         <View style={styles.seperator}></View>
-        <Text style={styles.seperator_text}>Or sign in with</Text>
+        <Text style={styles.seperator_text}>Or Sign Up With</Text>
         <View style={styles.seperator}></View>
       </View>
 
@@ -65,9 +77,9 @@ function SignIn({navigation}) {
       </View>
 
       <View style={styles.sign_up_wrapper}>
-        <Text style={styles.no_account_text}>Dont have an account?</Text>
+        <Text style={styles.no_account_text}>Already have an account?</Text>
         <TouchableOpacity style={styles.sign_up_button}>
-          <Text style={styles.text_signup}>Sign Up</Text>
+          <Text style={styles.text_signup}>Sign In</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -151,7 +163,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 50,
+    marginTop: 40,
   },
   seperator: {
     width: '30%',
@@ -169,7 +181,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 50,
+    marginTop: 30,
     paddingHorizontal: 20,
     gap: 10
   },
@@ -188,7 +200,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginLeft: 40,
-    marginTop: 140,
+    marginTop: 40,
     gap: 5
   },
   no_account_text: {

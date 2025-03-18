@@ -1,15 +1,15 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, ImageBackground } from 'react-native'
-function AuthScreen() {
+function AuthScreen({navigation}) {
   return (
     <View style={styles.container}>
-        <Image source={require('../assets/images/LuxeDrive_logo.png')} style={styles.logo_img}/>
+        <Image source={require('../assets/images/LuxeDrive_logo.png')} style={styles.logo_img} />
         <View style={styles.text_container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Signin')}>
                 <Text style={styles.text_title_signin}>Sign In</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
                 <Text style={styles.text_title_signup}>Sign Up</Text>
             </TouchableOpacity>
 
@@ -63,18 +63,18 @@ const styles = StyleSheet.create({
 
     },
     text_title_signup: {
-        color: '#000',
+        color: '#fff',
         fontSize: 17,    
         fontWeight: 'bold',
         marginTop: 30,
         borderRadius: 5,
         borderWidth: 2,
-        borderColor: '#fff',
+        borderColor: '#f40808',
         paddingVertical: 20,
         paddingHorizontal: 100,
         width: '100%',
         textAlign: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#f40808',
         opacity: 0.8,
         marginBottom: 20,
 
