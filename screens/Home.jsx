@@ -1,11 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import {LinearGradient} from 'expo-linear-gradient';
 
 function Home() {
   return (
-    <View style={styles.container}>
-      <Text>Home</Text>
-    </View>
+      <LinearGradient
+      colors={['#ffffff', '#000000']}
+      style={styles.container}
+      >
+        <Text>Home</ Text>
+      </LinearGradient>
   )
 }
 
@@ -16,5 +20,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#fff',
+    width: '100%',
+    height: '100%',
   },
 });
